@@ -59,7 +59,7 @@ public class Qes1_13 {
 
 		System.out.println(byteSample * 2);
 
-		System.out.println(charSample + strigSample + booleanSample);
+		System.out.println(charSample + " " + strigSample + " " + booleanSample);
 
 		int total = (int) (byteSample + shortSample + intSample + longSample + floatSample + doubleSample);
 		System.out.println(total);
