@@ -34,10 +34,10 @@ public class Qes1_13 {
 		byteSample = 0;
 		shortSample = 0;
 		intSample = 0;
-		longSample = 0;
+		longSample = 0L;
 		floatSample = 0F;
-		doubleSample = 0;
-		charSample = 0;
+		doubleSample = 0d;
+		charSample = '\0';
 		strigSample = null;
 		booleanSample = false;
 
