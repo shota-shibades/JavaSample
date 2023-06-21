@@ -45,9 +45,9 @@ public class Qes1_13 {
 		byteSample = 10;
 		shortSample = 100;
 		intSample = 1000;
-		longSample = 10000;
+		longSample = 10000L;
 		floatSample = 9.5F;
-		doubleSample = 10.5;
+		doubleSample = 10.5d;
 		charSample = 'a';
 		strigSample = "ハロー";
 		booleanSample = true;
@@ -106,7 +106,7 @@ public class Qes1_13 {
 		double heightBmi = height * 0.01;
 		// BMIの計算はBMI＝体重(kg) ÷ [身長(m) Ｘ 身長(m)
 		double bmi = weight / (heightBmi * heightBmi);
-		System.out.printf("「BMIは%fです」", bmi);
+		System.out.printf("「BMIは%.1fです」%n", bmi);
 
 		// .8).6で宣言した変数に再代入し下記の通りコンソールに出力してください
 		// 再代入
@@ -114,24 +114,23 @@ public class Qes1_13 {
 		age = 24;
 		height = 168.5;
 		weight = 64.2;
-		favorite = "オムレツ";
+		favorite = "オムライス";
 		heightBmi = height * 0.01;
 		bmi = weight / (heightBmi * heightBmi);
 
 		// 出力
 		System.out.printf("初めまして%sです%n", name);
 		System.out.printf("年齢は%d歳です%n", age);
-		System.out.printf("身長は%.1fcmです%n", height);
+		System.out.printf("身長%.1fcmです%n", height);
 		System.out.printf("体重は%.1fkgです%n", weight);
 		System.out.printf("好きな食べ物は%sです%n", favorite);
-		System.out.printf("BMIは%.1fです", bmi);
+		System.out.printf("BMIは%.1fです%n", bmi);
 
 		// .9).8で使用した変数を和算で自己代入し出力
 
 		age += age;
 		height += height;
 		weight += weight;
-		favorite += favorite;
 		heightBmi = height * 0.01;
 		bmi = weight / (heightBmi * heightBmi);
 
@@ -149,12 +148,12 @@ public class Qes1_13 {
 		String ageString = String.valueOf(age);
 		String heightString = String.valueOf(height);
 		String weightString = String.valueOf(weight);
-		//StringBuilderで文字列を連結
-		StringBuilder Suzuki = new StringBuilder();
-		Suzuki.append(ageString);
-		Suzuki.append(heightString);
-		Suzuki.append(weightString);
-		System.out.println(Suzuki.toString());
+		// StringBuilderで文字列を連結
+		StringBuilder SB = new StringBuilder();
+		SB.append(ageString);
+		SB.append(heightString);
+		SB.append(weightString);
+		System.out.println(SB.toString());
 
 		// .12)11で変換した【年齢・身長】を整数型に変換して出力してください
 		//parseIntメソッドでString型からint型(整数型)に変換
