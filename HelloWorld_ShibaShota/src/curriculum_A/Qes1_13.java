@@ -70,7 +70,9 @@ public class Qes1_13 {
 
 		System.out.println(byteSample - shortSample);
 
-		// .5)プログラムを修正して、意図する処理に直す
+		/* .5)次のプログラムを実行すると「ハローJAVA2023」という結果が表示されます。
+		 *「ハローJAVA43」と表示とさせたいのですが、意図通りに動きません。正しく動作するように修正してください。
+		 */
 		String num = "20";
 		int num1 = 23;
 		/* System.out.println("ハローJAVA"+(num+num1));の記述だと"20+23=43"
@@ -126,7 +128,7 @@ public class Qes1_13 {
 		System.out.printf("好きな食べ物は%sです%n", favorite);
 		System.out.printf("BMIは%.1fです%n", bmi);
 
-		// .9).8で使用した変数を和算で自己代入し出力
+		// .9)8で使用した変数【年齢・身長・体重】の数値を和算で自己代入し、下記の通りコンソールに出力してください
 
 		age += age;
 		height += height;
@@ -141,10 +143,13 @@ public class Qes1_13 {
 		System.out.printf("好きな食べ物は%sです%n", favorite);
 		System.out.printf("BMIは%.2fです%n", bmi);
 
-		// .10) 8で使用した年齢が25歳以上ならtrueが出力されるようにしてください。ただしif文は使いません
-		System.out.println(height >= 25);
+		// .10)8で使用した年齢が25歳以上ならtrueが出力されるようにしてください。ただしif文は使いません
+		age = 24;
+		System.out.println(age >= 25);
 
 		// .11) 8で使用した【年齢・身長・体重】を文字列型に型変換し繋げて出力してください
+		height = 168.5;
+		weight = 64.2;
 		String ageString = String.valueOf(age);
 		String heightString = String.valueOf(height);
 		String weightString = String.valueOf(weight);
@@ -164,7 +169,9 @@ public class Qes1_13 {
 		System.out.println(ageInt);
 		System.out.println(heightInt);
 
-		// .13)12で変換した【年齢・身長】で【年齢が25もしくは身長が160以上】であればtrueを出力してください
+		/* .13)12で変換した【年齢・身長】で【年齢が25もしくは身長が160以上】であればtrueを出力してください
+		 *ただしif文は使わないでください
+		 */
 		//どちらか一つの条件に当てはまる場合なので論理和"||"
 		System.out.println(ageInt > 25 || heightInt > 160);
 
