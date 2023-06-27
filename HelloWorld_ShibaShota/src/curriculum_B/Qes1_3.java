@@ -16,11 +16,15 @@ public class Qes1_3 {
 		Scanner sc = new Scanner(System.in);
 		String userName = sc.nextLine();
 		
+		
 		if(userName.length() > 10) {
 			System.out.println("「名前を10文字以内にしてください」");
 		
 		}else if (userName.length() == 0 || userName == null) {
 			System.out.println("「名前を入力してください」");
+			
+		}else if (userName.matches("[^A-Za-z0-9]+")){
+			System.out.println("「半角英数字のみで名前を入力してください」");
 			
 		}else {
 			System.out.println(userName + "「 入力したユーザー名 」を登録しました」");
