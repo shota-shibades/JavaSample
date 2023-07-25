@@ -14,7 +14,7 @@ public class Qes1_3 {
 		 */
 
 		// 2.)ユーザー名が半角英数字以外の場合「半角英数字のみで名前を入力してください」と出力してください
-
+		Scanner sc = new Scanner(System.in);;
 		// ユーザ名を格納する変数を定義
 		String userName = null;
 		// ユーザー名が正常に入力されるまでループする条件なので変数checkでフラグ
@@ -22,10 +22,9 @@ public class Qes1_3 {
 		// while文で繰り返し処理」
 		while (check == false) {
 			// Scanarクラスでコンソールから文字列を入力
-			Scanner sc = new Scanner(System.in);
+			
 			// nextLineメソッドで入力した文字列を取得
 			userName = sc.nextLine();
-
 			// 正規表現で10文字以上の文字列をチェック
 			if (userName.length() > 10) {
 				System.out.println("「名前を10文字以内にしてください」");
@@ -35,7 +34,7 @@ public class Qes1_3 {
 				System.out.println("「名前を入力してください」");
 
 				// matchesメソッドで半角英数字のチェック
-			} else if (userName.matches("[^A-Za-z0-9]+")) {
+			} else if (userName.matches("^[0-9a-zA-Z]+$")) {
 				System.out.println("「半角英数字のみで名前を入力してください」");
 
 				// 前記のバリデーション を抜ければフラグの変数checkがtrueになり、while文の条件を満たしてループから抜ける
@@ -43,14 +42,14 @@ public class Qes1_3 {
 				System.out.println(userName + "「 入力したユーザー名 」を登録しました」\n");
 				check = true;
 			}
+			
 		}
+		
 		// ジャンケンのコード
 		// ジャンケンの手を用意
 		String[] Hand = { "グー", "チョキ", "パー" };
 		// ジャンケンの回数を数える変数
 		int count = 0;
-		// ユーザの手を取得する変数
-		Scanner Sc;
 		// while文で使う変数を初期化。配列の引数として0,1,2は使っているので存在しない3を初期値
 		int myHand = 3;
 		int enemyHand = 3;
@@ -62,11 +61,10 @@ public class Qes1_3 {
 
 			System.out.println("ジャンケンをします、数字を入力してください。\n0はグー、1：チョキ、2：パー");
 
-			// Scanarクラスでコンソールから数を入力
-			Sc = new Scanner(System.in);
+//			 Scanarクラスでコンソールから数を入力
+//			sc = new Scanner(System.in);
 			// nextntメソッドで入力した数をint型で取得
-			myHand = Sc.nextInt();
-			
+			myHand = sc.nextInt();
 			// ジャンケンの入力に誤りがある場合、再度入力に戻る
 			if (!(myHand ==  0 || myHand == 1 || myHand == 2)) {
 				System.out.println(myHand);
@@ -97,8 +95,9 @@ public class Qes1_3 {
 			if (myHand ==  enemyHand) {
 				System.out.println("DRAW あいこ もう一回しましょう！");
 			}
-
+			sc.close();
 		}
+		
 		System.out.println("やるやん。\n次は俺にリベンジさせて");
 		System.out.println("勝つまでにかかった合計回数は"+ count +"回です");
 	}

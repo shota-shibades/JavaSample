@@ -9,9 +9,9 @@ public class Qes7 {
 		// 入力の指示を出力
 		System.out.printf("生徒の人数を入力してください（2以上）");
 		// scannerを用意
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		// 取得した数を変数studentに格納
-		int students = scan.nextInt();
+		int students = sc.nextInt();
 		// 多次元配列Transcriptを作成(成績を示すTranscript)
 		// 取得した数の配列の中に、要素が4つの配列の構成で定義
 		int[][] Transcript = new int[students][4];
@@ -25,10 +25,8 @@ public class Qes7 {
 				// 点数の入力の指示を出力。配列は1つ目の引数が0から始まるので、"%d人目の"
 				// %dにはi+1で、1人目→2人目→3人目→・・・となる
 				System.out.printf("%d人目の『%s』の点数を入力してください ", i + 1, subject[s]);
-				// scannerで各教科の点数を変数scoreに格納
-				Scanner score = new Scanner(System.in);
 				// 変数scoreを多次元配列Transcriptの配列の中の配列に格納
-				Transcript[i][s] = score.nextInt();
+				Transcript[i][s] = sc.nextInt();
 
 				// ここまでのfor文の点数の格納のイメージは
 				// Transcript[0][0]→Transcript[0][1]→Transcript[0][2]→Transcript[0][3]→
@@ -90,5 +88,6 @@ public class Qes7 {
 			// 出力
 			System.out.printf("%sの平均点は%.2f点です。\n", subject[kamoku], heikin);
 		}
+		sc.close();
 	}
 }

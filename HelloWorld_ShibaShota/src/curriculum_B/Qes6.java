@@ -7,9 +7,9 @@ public class Qes6 {
 	public static void main(String[] args) {
 
 		// scannerを用意
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		// 取得した文字列を変数sentenceに格納
-		String sentence = scan.nextLine();
+		String sentence = sc.nextLine();
 		// 取得した文字列から"、"で区切って配列Productに格納
 		String[] Product = sentence.split("、");
 		// 拡張for文で配列Productから一つずつ引き出して繰り返し処理
@@ -39,8 +39,13 @@ public class Qes6 {
 				System.out.println(product + "の残り台数は" + stock + "台です\n");
 				break;
 			// 文字列が"テレビ"または"ディスプレイ"の場合の出力
-			case "テレビ", "ディスプレイ":
-				System.out.println(product + "の残り台数は" + stock + "台です\n");
+			case "テレビ":
+			case "ディスプレイ":
+				int max = 11;
+				System.out.println(product);
+				// 文字列の比較は"=="ではなくequalsメソッド
+				System.out.println(product.equals("ディスプレイ") ? "ディスプレイの残り台数は" + (max - stock) + "台です\n"
+						: "テレビの残り台数は" + stock + "台です\n");
 				break;
 			// 文字列が指定の商品以外の場合の出力
 			default:
@@ -48,6 +53,8 @@ public class Qes6 {
 				break;
 
 			}
+			// scannerを閉じる
+			sc.close();
 		}
 	}
 }
