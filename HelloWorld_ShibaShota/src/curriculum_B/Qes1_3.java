@@ -14,6 +14,7 @@ public class Qes1_3 {
 		 */
 
 		// 2.)ユーザー名が半角英数字以外の場合「半角英数字のみで名前を入力してください」と出力してください
+		// scannerクラスを用意
 		Scanner sc = new Scanner(System.in);;
 		// ユーザ名を格納する変数を定義
 		String userName = null;
@@ -21,8 +22,6 @@ public class Qes1_3 {
 		boolean check = false;
 		// while文で繰り返し処理」
 		while (check == false) {
-			// Scanarクラスでコンソールから文字列を入力
-			
 			// nextLineメソッドで入力した文字列を取得
 			userName = sc.nextLine();
 			// 正規表現で10文字以上の文字列をチェック
@@ -34,7 +33,7 @@ public class Qes1_3 {
 				System.out.println("「名前を入力してください」");
 
 				// matchesメソッドで半角英数字のチェック
-			} else if (userName.matches("^[0-9a-zA-Z]+$")) {
+			} else if (!userName.matches("^[0-9a-zA-Z]+$")) {
 				System.out.println("「半角英数字のみで名前を入力してください」");
 
 				// 前記のバリデーション を抜ければフラグの変数checkがtrueになり、while文の条件を満たしてループから抜ける
@@ -95,6 +94,7 @@ public class Qes1_3 {
 			if (myHand ==  enemyHand) {
 				System.out.println("DRAW あいこ もう一回しましょう！");
 			}
+			// 繰り返し処理完了後にscannerを閉じる
 			sc.close();
 		}
 		
