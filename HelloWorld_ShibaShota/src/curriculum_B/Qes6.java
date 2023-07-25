@@ -42,7 +42,6 @@ public class Qes6 {
 			case "テレビ":
 			case "ディスプレイ":
 				int max = 11;
-				System.out.println(product);
 				// 文字列の比較は"=="ではなくequalsメソッド
 				System.out.println(product.equals("ディスプレイ") ? "ディスプレイの残り台数は" + (max - stock) + "台です\n"
 						: "テレビの残り台数は" + stock + "台です\n");

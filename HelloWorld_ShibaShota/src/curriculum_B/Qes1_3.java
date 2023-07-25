@@ -94,10 +94,9 @@ public class Qes1_3 {
 			if (myHand ==  enemyHand) {
 				System.out.println("DRAW あいこ もう一回しましょう！");
 			}
-			// 繰り返し処理完了後にscannerを閉じる
-			sc.close();
 		}
-		
+		// 繰り返し処理完了後にscannerを閉じる
+		sc.close();
 		System.out.println("やるやん。\n次は俺にリベンジさせて");
 		System.out.println("勝つまでにかかった合計回数は"+ count +"回です");
 	}
