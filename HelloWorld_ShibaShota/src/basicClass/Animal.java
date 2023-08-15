@@ -19,7 +19,7 @@ public class Animal {
 		// 現在の日時を取得
 		Date exDate = new Date();
 		// 表示形式を指定
-		SimpleDateFormat exDateFormat = new SimpleDateFormat("yyyy-MM-dd H:m:S");
+		SimpleDateFormat exDateFormat = new SimpleDateFormat("yyyy-MM-dd H:m:s");
 		// 出力
 		System.out.println(exDateFormat.format(exDate));
 	}
