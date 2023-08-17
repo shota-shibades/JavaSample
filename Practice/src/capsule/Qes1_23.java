@@ -8,9 +8,11 @@ public class Qes1_23 {
 	private double length;
 	// 速さの変数speedを定義
 	private int speed;
-
-	// setterメソッドでそれぞれの引数を変数に代入
-	public void setNameLengthSpeed(String name, double length, int speed) {
+	
+	
+	//コンストラクタで引数を変数に代入
+	public Qes1_23(String name, double length, int speed) {
+		super();
 		this.name = name;
 		this.length = length;
 		this.speed = speed;
@@ -31,4 +33,7 @@ public class Qes1_23 {
 	public int getSpeed() {
 		return this.speed;
 	}
+	
 }
+
+
