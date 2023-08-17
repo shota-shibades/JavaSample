@@ -10,7 +10,7 @@ public class SelfIntroduction {
 		String hobby = "アニメ";
 		
 		/*
-		 * 自己紹介文を出力する処理
+		 * 自己紹介文を出力する処理µ
 		 */
 		System.out.println("僕の名前は" + name + "です。");
 		System.out.println("年齢は" + age + "歳です。");
