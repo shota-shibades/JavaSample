@@ -4,12 +4,13 @@ package processor;
 // 子クラスとするので"SubClass"と命名
 // extendsでSuperClassを継承
 public class SubClass extends SuperClass {
+	//  カプセル化-処理用のクラスからのみ変数の定義が行えるようアクセス修飾子privateを指定
 	// 変数を定義
-	public int hitPoint;
-	public int magicPoint;
-	public int attack;
-	public int speed;
-	public int defence;
+	private int hitPoint;
+	private int magicPoint;
+	private int attack;
+	private int speed;
+	private int defence;
 
 	// 各変数のgetter、setterメソッド
 	public int getHitPoint() {
