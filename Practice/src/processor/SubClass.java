@@ -52,14 +52,4 @@ public class SubClass extends SuperClass {
 	public void setDefence(int defence) {
 		this.defence = defence;
 	}
-
-	// 各変数に数値を代入するメソッド
-	public void set() {
-		// super()で親メソッドを利用
-		setHitPoint(super.power(hitPoint));
-		setMagicPoint(super.power(magicPoint));
-		setAttack(super.power(attack));
-		setSpeed(super.power(speed));
-		setDefence(super.power(defence));
-	}
 }

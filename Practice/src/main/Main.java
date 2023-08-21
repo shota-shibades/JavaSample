@@ -19,8 +19,12 @@ public class Main {
 		System.out.println("ステータス");
 		// 処理用パッケージの子クラスをインスタンス化
 		processor.SubClass sc = new processor.SubClass();
-		// 子クラスで定義したメソッドでそれぞれの数値に代入
-		sc.set();
+		// 親クラスで定義したメソでそれぞれの変数にランダムな数値をセッターで代入
+		sc.setHitPoint(sc.power());
+		sc.setMagicPoint(sc.power());
+		sc.setAttack(sc.power());
+		sc.setSpeed(sc.power());
+		sc.setDefence(sc.power());
 		// 出力
 		System.out.printf("HP:%d%nMP:%d%n攻撃力%d%n素早さ:%d%n防御力:%d%n", sc.getHitPoint(), sc.getMagicPoint(), sc.getAttack(),
 				sc.getSpeed(), sc.getDefence());
