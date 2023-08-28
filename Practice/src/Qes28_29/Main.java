@@ -47,14 +47,21 @@ public class Main {
 		// scannerクラスを用意
 		Scanner sc = new Scanner(System.in);
 		String order = "";
+		String reorder = "";
 		// コンソールに入力を要求
-		System.out.println("コンソールに0から10までの数字を入力してください。\n複数入力する場合は’,’で区切ること。\nまた昇順、降順いずれかを入力してください。");
+		System.out.println("コンソールに0から10までの数字を入力してください。\n複数入力する場合は’,’で区切ること。");
 		// コンソールの入力を変数に格納
 		order = sc.nextLine();
 		// nullチェック
 		if (order == null) {
 			System.out.println("入力中情報が正しくありません");
 		}
+		
+		// コンソールに入力を要求
+		System.out.println("昇順または降順を入力しコンソールに入力してください");
+		// コンソールの入力を変数に格納
+		reorder = sc.nextLine();
+		
 		// 数字とカンマ以外を取り除き変数に代入
 		String number = order.replaceAll("[^0-9,]", "");
 		// 受け取った変数を","で区切って配列に格納
@@ -68,11 +75,11 @@ public class Main {
 		sc.close();
 
 		// コンソールから取得した文字列に昇順、降順の指定があった場合、配列を指定の通り並べ替える
-		if (order.contains("昇順")) {
+		if (reorder.contains("昇順")) {
 			// 配列を昇順に並べ替え
 			Arrays.sort(numbers);
 		}
-		if (order.contains("降順")) {
+		if (reorder.contains("降順")) {
 			// 配列を降順に並べ替え
 			Arrays.sort(numbers, Collections.reverseOrder());
 		}
