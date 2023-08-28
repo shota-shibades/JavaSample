@@ -78,10 +78,10 @@ public class Main {
 		}
 
 		// 処理用のクラスをインスタンス化
-		Qes28_29_2.Processer pr = new Qes28_29_2.Processer();
+		Qes28_29_2.Sub sub = new Qes28_29_2.Sub();
 		// for文で配列の数を順に代入して出力
 		for (int i = 0; i < numbers.length; i++) {
-			pr.printInfo(numbers[i]);
+			sub.printInfo(numbers[i]);
 		}
 
 	}
