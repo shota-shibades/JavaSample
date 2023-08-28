@@ -37,7 +37,7 @@ public class Animals {
 
 	// 出力用メソッド
 	public void printInfo() {
-		System.out.println("動物名：" + this.name + "\n 体長：" + this.length + "m" + "\n 速度：" + this.speed + "km/h"
+		System.out.println(" 動物名：" + this.name + "\n 体長：" + this.length + "m" + "\n 速度：" + this.speed + "km/h"
 				+ "\n 学名：" + this.logicalName);
 	}
 }

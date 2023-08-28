@@ -2,7 +2,7 @@ package Qes26_28;
 
 import java.util.Scanner;
 
-public class execution {
+public class Execution {
 
 	public static void main(String[] args) {
 		// scannerクラスを用意
